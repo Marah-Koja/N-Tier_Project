@@ -31,8 +31,12 @@ namespace NTierTodoApp.DataAccess
         public void Delete(int id)
         {
             // TODO: ابحث عن المهمة باستخدام id
-
+            var Deltask = GetById(id);
             // TODO: إذا كانت المهمة موجودة، قم بإزالتها من القائمة
+           if (Deltask != null) 
+          { 
+              tasks.Remove(Deltask); 
+          } 
         }
     }
 }
